@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新闻中心 | Huiyijia | Huiyijia Technology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <span>&#9742; +86-XXX-XXXX-XXXX</span>
+      <span>&#9993; sxljb2000@163.com</span>
+    </div>
+    <div class="top-bar-right">
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn" onclick="toggleLang()">
+          <span id="currentLang">中文</span>
+          <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+        </button>
+        <div class="lang-dropdown" id="langDropdown"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="汇亿嘉科技" class="logo-img">
+      <div>
+        <div class="logo-text">汇亿嘉科技</div>
+        <div class="logo-sub">HUIYIJIA TECHNOLOGY</div>
+      </div>
+    </a>
+    <nav class="nav-list" id="navList">
+      <a href="index.html" data-i18n="nav_home">首页</a>
+      <a href="about.html" data-i18n="nav_about">公司简介</a>
+      <a href="news.html" data-i18n="nav_news">新闻中心</a>
+      <a href="products.html" data-i18n="nav_products">产品清单</a>
+      <a href="contact.html" data-i18n="nav_contact">联系我们</a>
+      <a href="aftersales.html" data-i18n="nav_aftersales">售前售后</a>
+    </nav>
+    <div class="mobile-toggle" onclick="document.getElementById('navList').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+<div class="page-banner" style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));padding:80px 0;text-align:center;color:#fff">
+  <div class="container"><h1 style="font-size:42px;font-weight:700" data-i18n="news_title">新闻中心</h1></div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="news-grid">
+      <div class="news-card"><div class="news-date">2025</div><div class="news-body"><h3 data-i18n="news1_title">超声波燃气表传感器项目开发成功</h3><p data-i18n="news1_desc">汇亿嘉科技成功开发超声波燃气表传感器项目，标志着公司在超声波传感技术领域取得了重大突破，为未来批量生产奠定了坚实基础。</p></div></div>
+      <div class="news-card"><div class="news-date">2024</div><div class="news-body"><h3 data-i18n="news2_title">氧气传感器年产量突破40万</h3><p data-i18n="news2_desc">公司氧气传感器年产量成功突破40万套，持续为国内外制氧机制造商提供高品质传感器产品，市场占有率稳步提升。</p></div></div>
+      <div class="news-card"><div class="news-date">2023</div><div class="news-body"><h3 data-i18n="news3_title">通过ISO9001与GJB9001C体系认证</h3><p data-i18n="news3_desc">汇亿嘉协作工厂成功通过ISO9001:2015质量管理体系认证及GJB9001C-2017军工体系认证，进一步提升了产品质量保障能力。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about"><h4>汇亿嘉科技</h4><p data-i18n="footer_about">汇亿嘉科技成立于2014年，是一家专注于气体传感器研发、生产和销售的高新技术企业。公司致力于通过最优秀的产品和服务，为人类享受美好健康而不懈努力。</p></div>
+      <div><h4 data-i18n="footer_quick">快速链接</h4><ul><li><a href="index.html" data-i18n="nav_home">首页</a></li><li><a href="about.html" data-i18n="nav_about">公司简介</a></li><li><a href="products.html" data-i18n="nav_products">产品清单</a></li><li><a href="news.html" data-i18n="nav_news">新闻中心</a></li></ul></div>
+      <div><h4 data-i18n="footer_services">服务</h4><ul><li><a href="about.html" data-i18n="nav_lifecycle">全生命周期服务</a></li><li><a href="about.html" data-i18n="nav_manufacturing">生产制造</a></li><li><a href="aftersales.html" data-i18n="nav_aftersales">售前售后</a></li><li><a href="contact.html" data-i18n="nav_contact">联系我们</a></li></ul></div>
+      <div><h4 data-i18n="footer_contact">联系方式</h4><ul><li>+86-XXX-XXXX-XXXX</li><li>sxljb2000@163.com</li><li data-i18n="footer_addr">北京市通州区马驹桥联东U谷西区39号楼三层</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 汇亿嘉科技 Huiyijia Technology. <span data-i18n="footer_rights">版权所有</span></p></div>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+</body>
+</html>

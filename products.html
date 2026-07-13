@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>产品清单 | Huiyijia | Huiyijia Technology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <span>&#9742; +86-XXX-XXXX-XXXX</span>
+      <span>&#9993; sxljb2000@163.com</span>
+    </div>
+    <div class="top-bar-right">
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn" onclick="toggleLang()">
+          <span id="currentLang">中文</span>
+          <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+        </button>
+        <div class="lang-dropdown" id="langDropdown"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="汇亿嘉科技" class="logo-img">
+      <div>
+        <div class="logo-text">汇亿嘉科技</div>
+        <div class="logo-sub">HUIYIJIA TECHNOLOGY</div>
+      </div>
+    </a>
+    <nav class="nav-list" id="navList">
+      <a href="index.html" data-i18n="nav_home">首页</a>
+      <a href="about.html" data-i18n="nav_about">公司简介</a>
+      <a href="news.html" data-i18n="nav_news">新闻中心</a>
+      <a href="products.html" data-i18n="nav_products">产品清单</a>
+      <a href="contact.html" data-i18n="nav_contact">联系我们</a>
+      <a href="aftersales.html" data-i18n="nav_aftersales">售前售后</a>
+    </nav>
+    <div class="mobile-toggle" onclick="document.getElementById('navList').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+<div class="page-banner" style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));padding:80px 0;text-align:center;color:#fff">
+  <div class="container"><h1 style="font-size:42px;font-weight:700" data-i18n="products_title">产品清单</h1><p style="margin-top:12px;font-size:18px;opacity:.8" data-i18n="products_subtitle">为您提供高品质的传感器与解决方案</p></div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="products-grid">
+      <div class="product-card"><div class="product-img"><img src="images/product-sensor-1.png" alt=""></div><div class="product-info"><h3 data-i18n="prod1_title">氧传感器</h3><p data-i18n="prod1_desc">高精度氧气浓度与流量检测传感器，适用于制氧机等医疗设备</p></div></div>
+      <div class="product-card"><div class="product-img"><img src="images/product-sensor-2.png" alt=""></div><div class="product-info"><h3 data-i18n="prod2_title">氧浓度流量传感器</h3><p data-i18n="prod2_desc">精确测量氧浓度与流量，为医疗设备提供可靠数据支持</p></div></div>
+      <div class="product-card"><div class="product-img"><img src="images/product-sensor-3.png" alt=""></div><div class="product-info"><h3 data-i18n="prod3_title">制氧机主板</h3><p data-i18n="prod3_desc">自主研发的制氧机控制主板，稳定可靠，性能卓越</p></div></div>
+      <div class="product-card"><div class="product-img"><img src="images/product-gas-meter-1.png" alt=""></div><div class="product-info"><h3 data-i18n="prod4_title">超声波燃气表传感器</h3><p data-i18n="prod4_desc">全新超声波原理燃气计量传感器，精准计量，智能可靠</p></div></div>
+      <div class="product-card"><div class="product-img"><img src="images/product-gas-meter-2.png" alt=""></div><div class="product-info"><h3 data-i18n="prod5_title">氧机电路板</h3><p data-i18n="prod5_desc">高品质定制电路板，满足各类制氧设备的控制需求</p></div></div>
+      <div class="product-card"><div class="product-img"><img src="images/product-sensor-1.png" alt=""></div><div class="product-info"><h3 data-i18n="prod6_title">其他二类医疗器械有源产品</h3><p data-i18n="prod6_desc">涵盖多种二类医疗器械有源产品的研发与制造</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about"><h4>汇亿嘉科技</h4><p data-i18n="footer_about">汇亿嘉科技成立于2014年，是一家专注于气体传感器研发、生产和销售的高新技术企业。公司致力于通过最优秀的产品和服务，为人类享受美好健康而不懈努力。</p></div>
+      <div><h4 data-i18n="footer_quick">快速链接</h4><ul><li><a href="index.html" data-i18n="nav_home">首页</a></li><li><a href="about.html" data-i18n="nav_about">公司简介</a></li><li><a href="products.html" data-i18n="nav_products">产品清单</a></li><li><a href="news.html" data-i18n="nav_news">新闻中心</a></li></ul></div>
+      <div><h4 data-i18n="footer_services">服务</h4><ul><li><a href="about.html" data-i18n="nav_lifecycle">全生命周期服务</a></li><li><a href="about.html" data-i18n="nav_manufacturing">生产制造</a></li><li><a href="aftersales.html" data-i18n="nav_aftersales">售前售后</a></li><li><a href="contact.html" data-i18n="nav_contact">联系我们</a></li></ul></div>
+      <div><h4 data-i18n="footer_contact">联系方式</h4><ul><li>+86-XXX-XXXX-XXXX</li><li>sxljb2000@163.com</li><li data-i18n="footer_addr">北京市通州区马驹桥联东U谷西区39号楼三层</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 汇亿嘉科技 Huiyijia Technology. <span data-i18n="footer_rights">版权所有</span></p></div>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+</body>
+</html>
