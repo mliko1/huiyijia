@@ -13,7 +13,7 @@
   <div class="container">
     <div class="top-bar-left">
       <span>&#9742; +86-XXX-XXXX-XXXX</span>
-      <span>&#9993; sxljb2000@163.com</span>
+      <span>&#9993; info@huiyijia.com</span>
     </div>
     <div class="top-bar-right">
       <div class="lang-switcher" id="langSwitcher">
@@ -29,7 +29,6 @@
 <header class="header">
   <div class="container">
     <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="汇亿嘉科技" class="logo-img">
       <div>
         <div class="logo-text">汇亿嘉科技</div>
         <div class="logo-sub">HUIYIJIA TECHNOLOGY</div>
@@ -56,9 +55,9 @@
     <div class="contact-grid">
       <div class="contact-info">
         <h3 data-i18n="contact_heading">汇亿嘉科技</h3>
-        <div class="contact-item"><div class="contact-icon">&#9873;</div><div><h4 data-i18n="contact_addr_label">公司地址</h4><p data-i18n="contact_addr">北京市通州区马驹桥联东U谷西区39号楼三层</p></div></div>
+        <div class="contact-item"><div class="contact-icon">&#9873;</div><div><h4 data-i18n="contact_addr_label">公司地址</h4><p data-i18n="contact_addr">中国 · 北京</p></div></div>
         <div class="contact-item"><div class="contact-icon">&#9742;</div><div><h4 data-i18n="contact_phone_label">联系电话</h4><p>+86-XXX-XXXX-XXXX</p></div></div>
-        <div class="contact-item"><div class="contact-icon">&#9993;</div><div><h4 data-i18n="contact_email_label">电子邮箱</h4><p>sxljb2000@163.com</p></div></div>
+        <div class="contact-item"><div class="contact-icon">&#9993;</div><div><h4 data-i18n="contact_email_label">电子邮箱</h4><p>info@huiyijia.com</p></div></div>
         <div class="contact-item"><div class="contact-icon">&#9200;</div><div><h4 data-i18n="contact_hours_label">工作时间</h4><p data-i18n="contact_hours">周一至周五 9:00 - 18:00</p></div></div>
       </div>
       <div class="contact-form">
@@ -75,19 +74,6 @@
     </div>
   </div>
 </section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-about"><h4>汇亿嘉科技</h4><p data-i18n="footer_about">汇亿嘉科技成立于2014年，是一家专注于气体传感器研发、生产和销售的高新技术企业。公司致力于通过最优秀的产品和服务，为人类享受美好健康而不懈努力。</p></div>
-      <div><h4 data-i18n="footer_quick">快速链接</h4><ul><li><a href="index.html" data-i18n="nav_home">首页</a></li><li><a href="about.html" data-i18n="nav_about">公司简介</a></li><li><a href="products.html" data-i18n="nav_products">产品清单</a></li><li><a href="news.html" data-i18n="nav_news">新闻中心</a></li></ul></div>
-      <div><h4 data-i18n="footer_services">服务</h4><ul><li><a href="about.html" data-i18n="nav_lifecycle">全生命周期服务</a></li><li><a href="about.html" data-i18n="nav_manufacturing">生产制造</a></li><li><a href="aftersales.html" data-i18n="nav_aftersales">售前售后</a></li><li><a href="contact.html" data-i18n="nav_contact">联系我们</a></li></ul></div>
-      <div><h4 data-i18n="footer_contact">联系方式</h4><ul><li>+86-XXX-XXXX-XXXX</li><li>sxljb2000@163.com</li><li data-i18n="footer_addr">北京市通州区马驹桥联东U谷西区39号楼三层</li></ul></div>
-    </div>
-    <div class="footer-bottom"><p>&copy; 2026 汇亿嘉科技 Huiyijia Technology. <span data-i18n="footer_rights">版权所有</span></p></div>
-  </div>
-</footer>
-<script src="i18n.js"></script>
 <script>
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
@@ -97,26 +83,39 @@ document.getElementById('contactForm').addEventListener('submit', async function
   btn.textContent = '发送中...';
   result.textContent = '';
   try {
-    const res = await fetch('/api/contact', {
+    const res = await fetch('https://formsubmit.co/ajax/sxljb2000@163.com', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         name: document.getElementById('cName').value,
         email: document.getElementById('cEmail').value,
-        subject: document.getElementById('cSubject').value,
+        subject: '[汇亿嘉网站] ' + document.getElementById('cSubject').value,
         message: document.getElementById('cMsg').value
       })
     });
     const data = await res.json();
-    result.style.color = data.ok ? '#27ae60' : '#e74c3c';
-    result.textContent = data.msg;
+    result.style.color = data.success ? '#27ae60' : '#e74c3c';
+    result.textContent = data.success ? '感谢您的咨询，我们会尽快回复！' : '发送失败，请稍后再试';
   } catch(err) {
     result.style.color = '#e74c3c';
-    result.textContent = '网络错误，请稍后再试';
+    result.textContent = '发送失败：' + err.message;
   }
   btn.disabled = false;
   btn.textContent = '提交咨询';
 });
 </script>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about"><h4>汇亿嘉科技</h4><p data-i18n="footer_about">汇亿嘉科技成立于2014年，是一家专注于气体传感器研发、生产和销售的高新技术企业。公司致力于通过最优秀的产品和服务，为人类享受美好健康而不懈努力。</p></div>
+      <div><h4 data-i18n="footer_quick">快速链接</h4><ul><li><a href="index.html" data-i18n="nav_home">首页</a></li><li><a href="about.html" data-i18n="nav_about">公司简介</a></li><li><a href="products.html" data-i18n="nav_products">产品清单</a></li><li><a href="news.html" data-i18n="nav_news">新闻中心</a></li></ul></div>
+      <div><h4 data-i18n="footer_services">服务</h4><ul><li><a href="about.html" data-i18n="nav_lifecycle">全生命周期服务</a></li><li><a href="about.html" data-i18n="nav_manufacturing">生产制造</a></li><li><a href="aftersales.html" data-i18n="nav_aftersales">售前售后</a></li><li><a href="contact.html" data-i18n="nav_contact">联系我们</a></li></ul></div>
+      <div><h4 data-i18n="footer_contact">联系方式</h4><ul><li>+86-XXX-XXXX-XXXX</li><li>info@huiyijia.com</li><li data-i18n="footer_addr">中国 · 北京</li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 汇亿嘉科技 Huiyijia Technology. <span data-i18n="footer_rights">版权所有</span></p></div>
+  </div>
+</footer>
+<script src="i18n.js"></script>
 </body>
 </html>
