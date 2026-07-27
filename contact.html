@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>联系我们 | Huiyijia | Huiyijia Technology</title>
+<meta name="description" content="联系汇亿嘉科技 — 公司地址、电话、邮箱与在线咨询表单，为您提供专业的产品与技术支持。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..500,30..100&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Spline+Sans+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,6 +31,7 @@
 <header class="header">
   <div class="container">
     <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="汇亿嘉科技" class="logo-img">
       <div>
         <div class="logo-text">汇亿嘉科技</div>
         <div class="logo-sub">HUIYIJIA TECHNOLOGY</div>
@@ -39,7 +42,7 @@
       <a href="about.html" data-i18n="nav_about">公司简介</a>
       <a href="news.html" data-i18n="nav_news">新闻中心</a>
       <a href="products.html" data-i18n="nav_products">产品清单</a>
-      <a href="contact.html" data-i18n="nav_contact">联系我们</a>
+      <a href="contact.html" data-i18n="nav_contact" class="active">联系我们</a>
       <a href="aftersales.html" data-i18n="nav_aftersales">售前售后</a>
     </nav>
     <div class="mobile-toggle" onclick="document.getElementById('navList').classList.toggle('open')">
@@ -47,28 +50,32 @@
     </div>
   </div>
 </header>
-<div class="page-banner" style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));padding:80px 0;text-align:center;color:#fff">
-  <div class="container"><h1 style="font-size:42px;font-weight:700" data-i18n="contact_title">联系我们</h1></div>
+<div class="page-banner">
+  <div class="container">
+    <span class="eyebrow">GET IN TOUCH</span>
+    <h1 data-i18n="contact_title">联系我们</h1>
+  </div>
 </div>
 <section class="section">
   <div class="container">
     <div class="contact-grid">
-      <div class="contact-info">
+      <div class="contact-info fade-up">
+        <span class="eyebrow">CONTACT</span>
         <h3 data-i18n="contact_heading">汇亿嘉科技</h3>
         <div class="contact-item"><div class="contact-icon">&#9873;</div><div><h4 data-i18n="contact_addr_label">公司地址</h4><p data-i18n="contact_addr">中国 · 北京</p></div></div>
         <div class="contact-item"><div class="contact-icon">&#9742;</div><div><h4 data-i18n="contact_phone_label">联系电话</h4><p>+86-XXX-XXXX-XXXX</p></div></div>
         <div class="contact-item"><div class="contact-icon">&#9993;</div><div><h4 data-i18n="contact_email_label">电子邮箱</h4><p>info@huiyijia.com</p></div></div>
         <div class="contact-item"><div class="contact-icon">&#9200;</div><div><h4 data-i18n="contact_hours_label">工作时间</h4><p data-i18n="contact_hours">周一至周五 9:00 - 18:00</p></div></div>
       </div>
-      <div class="contact-form">
-        <h3 style="font-size:20px;color:var(--primary);margin-bottom:24px" data-i18n="form_title">发送咨询</h3>
+      <div class="contact-form fade-up">
+        <h3 data-i18n="form_title">发送咨询</h3>
         <form id="contactForm">
           <div class="form-group"><label data-i18n="form_name">姓名</label><input type="text" id="cName" required></div>
           <div class="form-group"><label data-i18n="form_email">邮箱</label><input type="email" id="cEmail" required></div>
           <div class="form-group"><label data-i18n="form_subject">主题</label><select id="cSubject"><option data-i18n="form_opt1">产品咨询</option><option data-i18n="form_opt2">技术支持</option><option data-i18n="form_opt3">样品申请</option><option data-i18n="form_opt4">合作洽谈</option></select></div>
           <div class="form-group"><label data-i18n="form_message">留言内容</label><textarea id="cMsg" required></textarea></div>
           <button type="submit" class="btn" data-i18n="form_submit">提交咨询</button>
-          <p id="formResult" style="margin-top:12px;font-size:14px"></p>
+          <p id="formResult" style="margin-top:16px;font-size:14px;font-family:var(--ff-body)"></p>
         </form>
       </div>
     </div>
@@ -80,7 +87,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   const btn = this.querySelector('button[type=submit]');
   const result = document.getElementById('formResult');
   btn.disabled = true;
-  btn.textContent = '发送中...';
+  btn.textContent = '...';
   result.textContent = '';
   try {
     const res = await fetch('https://formsubmit.co/ajax/sxljb2000@163.com', {
@@ -94,10 +101,10 @@ document.getElementById('contactForm').addEventListener('submit', async function
       })
     });
     const data = await res.json();
-    result.style.color = data.success ? '#27ae60' : '#e74c3c';
+    result.style.color = data.success ? '#7fbf9a' : '#d98a8a';
     result.textContent = data.success ? '感谢您的咨询，我们会尽快回复！' : '发送失败，请稍后再试';
   } catch(err) {
-    result.style.color = '#e74c3c';
+    result.style.color = '#d98a8a';
     result.textContent = '发送失败：' + err.message;
   }
   btn.disabled = false;
@@ -116,6 +123,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     <div class="footer-bottom"><p>&copy; 2026 汇亿嘉科技 Huiyijia Technology. <span data-i18n="footer_rights">版权所有</span></p></div>
   </div>
 </footer>
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</div>
 <script src="i18n.js"></script>
 </body>
 </html>

@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>首页 | Huiyijia | Huiyijia Technology</title>
+<meta name="description" content="汇亿嘉科技 — 气体传感器行业领导者，专注氧气传感器、超声波燃气表传感器的研发与制造。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..500,30..100&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Spline+Sans+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -36,7 +38,7 @@
       </div>
     </a>
     <nav class="nav-list" id="navList">
-      <a href="index.html" data-i18n="nav_home">首页</a>
+      <a href="index.html" data-i18n="nav_home" class="active">首页</a>
       <a href="about.html" data-i18n="nav_about">公司简介</a>
       <a href="news.html" data-i18n="nav_news">新闻中心</a>
       <a href="products.html" data-i18n="nav_products">产品清单</a>
@@ -52,23 +54,29 @@
   <div class="hero-slide active"><img src="images/hero-1.png" alt=""></div>
   <div class="hero-slide"><img src="images/hero-2.png" alt=""></div>
   <div class="hero-slide"><img src="images/hero-3.png" alt=""></div>
-  <div class="hero-overlay">
-    <div class="hero-content">
-      <h1 data-i18n="hero_title">汇亿嘉科技简介</h1>
-      <p data-i18n="hero_sub">气体传感器行业领导者</p>
-    </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="eyebrow">EST. 2014 — BEIJING</span>
+    <h1 data-i18n="hero_title">汇亿嘉科技简介</h1>
+    <p data-i18n="hero_sub">气体传感器行业领导者</p>
   </div>
   <div class="hero-dots">
     <span class="active" onclick="goSlide(0)"></span>
     <span onclick="goSlide(1)"></span>
     <span onclick="goSlide(2)"></span>
   </div>
+  <div class="hero-scroll">SCROLL</div>
 </section>
 <section class="section">
   <div class="container">
-    <div class="section-header"><h2 data-i18n="about_title">公司简介</h2><p data-i18n="about_subtitle">气体传感器行业解决方案服务商</p></div>
+    <div class="section-header fade-up">
+      <span class="section-index">01 — HUIYIJIA</span>
+      <h2 data-i18n="about_title">公司简介</h2>
+      <p data-i18n="about_subtitle">气体传感器行业解决方案服务商</p>
+    </div>
     <div class="about-grid">
-      <div class="about-text">
+      <div class="about-text fade-up">
+        <span class="eyebrow">OUR COMPANY</span>
         <h3 data-i18n="about_heading">汇亿嘉公司概况</h3>
         <p data-i18n="about_p1">企业文化: 客户、正直、激情、团队</p>
         <p data-i18n="about_p2">愿景：致力于通过最优秀的产品和服务，为人类享受美好健康而不懈努力</p>
@@ -79,7 +87,7 @@
           <div class="stat-item"><div class="stat-num">12+</div><div class="stat-label" data-i18n="stat_years">年行业经验</div></div>
         </div>
       </div>
-      <div class="about-images">
+      <div class="about-images fade-up">
         <img src="images/company-overview-1.png" alt="">
         <img src="images/company-overview-2.png" alt="">
         <img src="images/company-overview-3.png" alt="">
@@ -90,26 +98,33 @@
 </section>
 <section class="section section-alt">
   <div class="container">
-    <div class="section-header"><h2 data-i18n="timeline_title">发展历程</h2></div>
+    <div class="section-header center fade-up">
+      <span class="section-index">02 — TIMELINE</span>
+      <h2 data-i18n="timeline_title">发展历程</h2>
+    </div>
     <div class="timeline">
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2014</div><div class="timeline-text" data-i18n="tl_2014">2014年成立于北京</div></div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2016</div><div class="timeline-text" data-i18n="tl_2016">传感器产品在制氧机行业达到国内领先水平</div></div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2018</div><div class="timeline-text" data-i18n="tl_2018">引入行业投资基金，组建高管团队</div></div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2020</div><div class="timeline-text" data-i18n="tl_2020">氧气传感器年产量突破40万</div></div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2025</div><div class="timeline-text" data-i18n="tl_2025">超声波燃气表项目开发成功</div></div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2027</div><div class="timeline-text" data-i18n="tl_2027">超声波燃气表传感器批量生产</div></div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2030</div><div class="timeline-text" data-i18n="tl_2030">全面提升新能源市场</div></div></div>
+      <div class="timeline-item fade-up"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2014</div><div class="timeline-text" data-i18n="tl_2014">2014年成立于北京</div></div></div>
+      <div class="timeline-item fade-up"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2016</div><div class="timeline-text" data-i18n="tl_2016">传感器产品在制氧机行业达到国内领先水平</div></div></div>
+      <div class="timeline-item fade-up"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2018</div><div class="timeline-text" data-i18n="tl_2018">引入行业投资基金，组建高管团队</div></div></div>
+      <div class="timeline-item fade-up"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2020</div><div class="timeline-text" data-i18n="tl_2020">氧气传感器年产量突破40万</div></div></div>
+      <div class="timeline-item fade-up"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2025</div><div class="timeline-text" data-i18n="tl_2025">超声波燃气表项目开发成功</div></div></div>
+      <div class="timeline-item fade-up"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2027</div><div class="timeline-text" data-i18n="tl_2027">超声波燃气表传感器批量生产</div></div></div>
+      <div class="timeline-item fade-up"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2030</div><div class="timeline-text" data-i18n="tl_2030">全面提升新能源市场</div></div></div>
     </div>
   </div>
 </section>
-<section class="section section-alt">
+<section class="section">
   <div class="container">
-    <div class="section-header"><h2 data-i18n="clients_title">客户群</h2><p data-i18n="clients_subtitle">我们服务众多行业领导者</p></div>
+    <div class="section-header center fade-up">
+      <span class="section-index">03 — CLIENTS</span>
+      <h2 data-i18n="clients_title">客户群</h2>
+      <p data-i18n="clients_subtitle">我们服务众多行业领导者</p>
+    </div>
     <div class="clients-grid">
-      <div class="client-card"><div class="client-logo"><img src="images/client-1.png" alt=""></div><div class="client-name" data-i18n="client1">富林</div></div>
-      <div class="client-card"><div class="client-logo"><img src="images/client-2.png" alt=""></div><div class="client-name" data-i18n="client2">皖舒医疗</div></div>
-      <div class="client-card"><div class="client-logo"><img src="images/client-3.png" alt=""></div><div class="client-name" data-i18n="client3">巨贸康健</div></div>
-      <div class="client-card"><div class="client-logo"><img src="images/client-4.png" alt=""></div><div class="client-name" data-i18n="client4">双熙医疗</div></div>
+      <div class="client-card fade-up"><div class="client-logo"><img src="images/client-1.png" alt=""></div><div class="client-name" data-i18n="client1">富林</div></div>
+      <div class="client-card fade-up"><div class="client-logo"><img src="images/client-2.png" alt=""></div><div class="client-name" data-i18n="client2">皖舒医疗</div></div>
+      <div class="client-card fade-up"><div class="client-logo"><img src="images/client-3.png" alt=""></div><div class="client-name" data-i18n="client3">巨贸康健</div></div>
+      <div class="client-card fade-up"><div class="client-logo"><img src="images/client-4.png" alt=""></div><div class="client-name" data-i18n="client4">双熙医疗</div></div>
     </div>
   </div>
 </section>
@@ -125,6 +140,7 @@
     <div class="footer-bottom"><p>&copy; 2026 汇亿嘉科技 Huiyijia Technology. <span data-i18n="footer_rights">版权所有</span></p></div>
   </div>
 </footer>
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</div>
 <script src="i18n.js"></script>
 </body>
 </html>

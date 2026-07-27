@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>新闻中心 | Huiyijia | Huiyijia Technology</title>
+<meta name="description" content="汇亿嘉科技新闻动态 — 超声波燃气表传感器项目开发、氧气传感器产量突破40万、ISO9001与GJB9001C体系认证。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..500,30..100&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Spline+Sans+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,7 +40,7 @@
     <nav class="nav-list" id="navList">
       <a href="index.html" data-i18n="nav_home">首页</a>
       <a href="about.html" data-i18n="nav_about">公司简介</a>
-      <a href="news.html" data-i18n="nav_news">新闻中心</a>
+      <a href="news.html" data-i18n="nav_news" class="active">新闻中心</a>
       <a href="products.html" data-i18n="nav_products">产品清单</a>
       <a href="contact.html" data-i18n="nav_contact">联系我们</a>
       <a href="aftersales.html" data-i18n="nav_aftersales">售前售后</a>
@@ -48,15 +50,18 @@
     </div>
   </div>
 </header>
-<div class="page-banner" style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));padding:80px 0;text-align:center;color:#fff">
-  <div class="container"><h1 style="font-size:42px;font-weight:700" data-i18n="news_title">新闻中心</h1></div>
+<div class="page-banner">
+  <div class="container">
+    <span class="eyebrow">NEWS &amp; INSIGHTS</span>
+    <h1 data-i18n="news_title">新闻中心</h1>
+  </div>
 </div>
 <section class="section">
   <div class="container">
     <div class="news-grid">
-      <div class="news-card"><div class="news-date">2025</div><div class="news-body"><h3 data-i18n="news1_title">超声波燃气表传感器项目开发成功</h3><p data-i18n="news1_desc">汇亿嘉科技成功开发超声波燃气表传感器项目，标志着公司在超声波传感技术领域取得了重大突破，为未来批量生产奠定了坚实基础。</p></div></div>
-      <div class="news-card"><div class="news-date">2024</div><div class="news-body"><h3 data-i18n="news2_title">氧气传感器年产量突破40万</h3><p data-i18n="news2_desc">公司氧气传感器年产量成功突破40万套，持续为国内外制氧机制造商提供高品质传感器产品，市场占有率稳步提升。</p></div></div>
-      <div class="news-card"><div class="news-date">2023</div><div class="news-body"><h3 data-i18n="news3_title">通过ISO9001与GJB9001C体系认证</h3><p data-i18n="news3_desc">汇亿嘉协作工厂成功通过ISO9001:2015质量管理体系认证及GJB9001C-2017军工体系认证，进一步提升了产品质量保障能力。</p></div></div>
+      <div class="news-card fade-up"><div class="news-date">2025</div><div class="news-body"><h3 data-i18n="news1_title">超声波燃气表传感器项目开发成功</h3><p data-i18n="news1_desc">汇亿嘉科技成功开发超声波燃气表传感器项目，标志着公司在超声波传感技术领域取得了重大突破，为未来批量生产奠定了坚实基础。</p></div></div>
+      <div class="news-card fade-up"><div class="news-date">2024</div><div class="news-body"><h3 data-i18n="news2_title">氧气传感器年产量突破40万</h3><p data-i18n="news2_desc">公司氧气传感器年产量成功突破40万套，持续为国内外制氧机制造商提供高品质传感器产品，市场占有率稳步提升。</p></div></div>
+      <div class="news-card fade-up"><div class="news-date">2023</div><div class="news-body"><h3 data-i18n="news3_title">通过ISO9001与GJB9001C体系认证</h3><p data-i18n="news3_desc">汇亿嘉协作工厂成功通过ISO9001:2015质量管理体系认证及GJB9001C-2017军工体系认证，进一步提升了产品质量保障能力。</p></div></div>
     </div>
   </div>
 </section>
@@ -72,6 +77,7 @@
     <div class="footer-bottom"><p>&copy; 2026 汇亿嘉科技 Huiyijia Technology. <span data-i18n="footer_rights">版权所有</span></p></div>
   </div>
 </footer>
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</div>
 <script src="i18n.js"></script>
 </body>
 </html>

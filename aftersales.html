@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>售前售后 | Huiyijia | Huiyijia Technology</title>
+<meta name="description" content="汇亿嘉科技售前售后服务 — 售前咨询、技术支持、售后服务与产品全生命周期管理。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..500,30..100&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Spline+Sans+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -41,29 +43,37 @@
       <a href="news.html" data-i18n="nav_news">新闻中心</a>
       <a href="products.html" data-i18n="nav_products">产品清单</a>
       <a href="contact.html" data-i18n="nav_contact">联系我们</a>
-      <a href="aftersales.html" data-i18n="nav_aftersales">售前售后</a>
+      <a href="aftersales.html" data-i18n="nav_aftersales" class="active">售前售后</a>
     </nav>
     <div class="mobile-toggle" onclick="document.getElementById('navList').classList.toggle('open')">
       <span></span><span></span><span></span>
     </div>
   </div>
 </header>
-<div class="page-banner" style="background:linear-gradient(135deg,var(--primary-dark),var(--primary));padding:80px 0;text-align:center;color:#fff">
-  <div class="container"><h1 style="font-size:42px;font-weight:700" data-i18n="aftersales_title">售前售后</h1><p style="margin-top:12px;font-size:18px;opacity:.8" data-i18n="aftersales_subtitle">专业团队为您提供全方位的技术支持与服务保障</p></div>
+<div class="page-banner">
+  <div class="container">
+    <span class="eyebrow">SERVICE &amp; SUPPORT</span>
+    <h1 data-i18n="aftersales_title">售前售后</h1>
+    <p data-i18n="aftersales_subtitle">专业团队为您提供全方位的技术支持与服务保障</p>
+  </div>
 </div>
 <section class="section">
   <div class="container">
     <div class="aftersales-grid">
-      <div class="aftersales-card"><div class="service-icon">&#9881;</div><h3 data-i18n="as1_title">售前咨询</h3><p data-i18n="as1_desc">专业工程师团队为您提供产品选型、技术方案定制、样品申请等全方位售前服务，帮助您找到最适合的解决方案。</p></div>
-      <div class="aftersales-card"><div class="service-icon">&#9878;</div><h3 data-i18n="as2_title">技术支持</h3><p data-i18n="as2_desc">提供产品使用培训、技术文档、应用指导等全面技术支持，确保产品在您的系统中发挥最佳性能。</p></div>
-      <div class="aftersales-card"><div class="service-icon">&#9889;</div><h3 data-i18n="as3_title">售后服务</h3><p data-i18n="as3_desc">快速响应的售后服务体系，提供产品维修、备件供应、质量追溯等完善售后保障，让您无后顾之忧。</p></div>
+      <div class="aftersales-card fade-up"><div class="service-icon">&#9881;</div><h3 data-i18n="as1_title">售前咨询</h3><p data-i18n="as1_desc">专业工程师团队为您提供产品选型、技术方案定制、样品申请等全方位售前服务，帮助您找到最适合的解决方案。</p></div>
+      <div class="aftersales-card fade-up"><div class="service-icon">&#9878;</div><h3 data-i18n="as2_title">技术支持</h3><p data-i18n="as2_desc">提供产品使用培训、技术文档、应用指导等全面技术支持，确保产品在您的系统中发挥最佳性能。</p></div>
+      <div class="aftersales-card fade-up"><div class="service-icon">&#9889;</div><h3 data-i18n="as3_title">售后服务</h3><p data-i18n="as3_desc">快速响应的售后服务体系，提供产品维修、备件供应、质量追溯等完善售后保障，让您无后顾之忧。</p></div>
     </div>
   </div>
 </section>
 <section class="section section-alt">
   <div class="container">
-    <div class="section-header"><h2 data-i18n="lifecycle_title">全生命周期服务</h2><p data-i18n="lifecycle_subtitle">从设计开发到量产交付，提供全方位的专业服务</p></div>
-    <div class="lifecycle-wrapper">
+    <div class="section-header fade-up">
+      <span class="section-index">01 — LIFECYCLE</span>
+      <h2 data-i18n="lifecycle_title">全生命周期服务</h2>
+      <p data-i18n="lifecycle_subtitle">从设计开发到量产交付，提供全方位的专业服务</p>
+    </div>
+    <div class="lifecycle-wrapper fade-up">
       <div class="lifecycle-image"><img src="images/lifecycle-service.png" alt=""></div>
       <div class="lifecycle-steps">
         <div class="lifecycle-step"><div class="lifecycle-step-num">1</div><div class="lifecycle-step-content"><h4 data-i18n="lc1_title">设计开发</h4><p data-i18n="lc1_desc">电路板开发设计；电子元器件选型；产品结构设计；软件编程；原始设计验证；快速样品制造</p></div></div>
@@ -86,6 +96,7 @@
     <div class="footer-bottom"><p>&copy; 2026 汇亿嘉科技 Huiyijia Technology. <span data-i18n="footer_rights">版权所有</span></p></div>
   </div>
 </footer>
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</div>
 <script src="i18n.js"></script>
 </body>
 </html>
