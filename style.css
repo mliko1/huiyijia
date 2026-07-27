@@ -6,13 +6,13 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
 :root{
-  /* — Surfaces (warm ivory / paper) — */
+  /* — Surfaces (cool grey × warm stone — split palette) — */
   --ink:#1f2329;
-  --paper:#f6f2ea;
-  --paper-alt:#efe9de;
+  --paper:#e8ebf0;
+  --paper-alt:#f1ece1;
   --card:#ffffff;
-  --card-soft:#faf7f1;
-  --card-warm:#f1ece1;
+  --card-soft:#faf8f4;
+  --card-warm:#f3eee4;
   --on-light:#f4f1ea;
 
   /* — Bronze metallic accents — */
@@ -135,7 +135,7 @@ body::before{
    HEADER / NAV
    ============================================================ */
 .header{
-  background:rgba(246,242,234,.82);
+  background:rgba(232,235,240,.85);
   backdrop-filter:blur(20px) saturate(140%);
   -webkit-backdrop-filter:blur(20px) saturate(140%);
   position:sticky;top:0;z-index:9999;
@@ -189,17 +189,17 @@ body::before{
   position:relative;z-index:3;height:100%;display:flex;flex-direction:column;justify-content:center;
   max-width:760px;padding:0 40px;margin:0 auto;color:#f6f2ea;
 }
-.hero-content .eyebrow{margin-bottom:28px;color:var(--bronze-bright)}
-.hero-content .eyebrow::before{background:var(--bronze-bright)}
+.hero-content .eyebrow{margin-bottom:28px;color:var(--bronze-bright);font-size:14px;letter-spacing:.38em}
+.hero-content .eyebrow::before{background:var(--bronze-bright);width:34px}
 .hero-content h1{
-  font-family:var(--ff-display);font-size:clamp(36px,5.2vw,64px);font-weight:500;
-  line-height:1.04;letter-spacing:-.015em;margin-bottom:22px;color:#f6f2ea;
+  font-family:var(--ff-display);font-size:clamp(48px,7vw,88px);font-weight:500;
+  line-height:1.04;letter-spacing:-.015em;margin-bottom:26px;color:#f6f2ea;
   font-variation-settings:"opsz" 144,"SOFT" 30;
 }
 .hero-content h1 em{font-style:italic;color:var(--bronze-bright);font-weight:400}
 .hero-content p{
-  font-size:clamp(16px,1.6vw,21px);color:rgba(246,242,234,.85);font-weight:300;
-  letter-spacing:.04em;max-width:520px;line-height:1.7;
+  font-size:clamp(19px,2vw,27px);color:rgba(246,242,234,.88);font-weight:300;
+  letter-spacing:.04em;max-width:560px;line-height:1.7;
 }
 .hero-dots{position:absolute;bottom:42px;left:50%;transform:translateX(-50%);display:flex;gap:14px;z-index:5}
 .hero-dots span{
