@@ -426,7 +426,7 @@ body::after{
 .client-card:hover{background:var(--card-warm)}
 .client-card::after{content:"";position:absolute;left:0;top:0;width:2px;height:0;background:var(--bronze);transition:height .4s var(--ease-out)}
 .client-card:hover::after{height:100%}
-.client-num{font-family:var(--ff-mono);font-size:12px;color:var(--bronze);letter-spacing:.2em;flex-shrink:0}
+.client-dot{width:7px;height:7px;background:var(--bronze);border-radius:50%;flex-shrink:0;transition:var(--t)}
 .client-name{font-family:var(--ff-display);font-size:22px;font-weight:500;color:var(--cream);letter-spacing:.01em;transition:var(--t)}
 .client-card:hover .client-name{color:var(--bronze-deep)}
 
