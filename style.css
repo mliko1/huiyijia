@@ -751,26 +751,17 @@ body::after{
   50%{opacity:.5}
 }
 
-/* — 3. SHINY TEXT (React Bits) — Moving shine sweep — */
-.shiny-text{
-  background:linear-gradient(110deg,#f6f2ea 35%,rgba(255,255,255,.9) 50%,#f6f2ea 65%);
+/* — 3. SHINY TEXT — Light sweep overlay (text stays solid & visible) — */
+.shiny-text{position:relative;overflow:hidden}
+.shiny-text::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.35) 50%,transparent 65%);
   background-size:200% 100%;
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;color:transparent;
   animation:shine 4s linear infinite;
+  pointer-events:none;
 }
-[data-theme="dark"] .shiny-text{
-  background:linear-gradient(110deg,#ebe7df 35%,#ffffff 50%,#ebe7df 65%);
-  background-size:200% 100%;
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;color:transparent;
-  animation:shine 4s linear infinite;
-}
-[data-theme="dark"] .hero-content h1.shiny-text{
-  background:linear-gradient(110deg,#d4cfc4 35%,#ffffff 50%,#d4cfc4 65%);
-  background-size:200% 100%;
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;color:transparent;
+[data-theme="dark"] .shiny-text::after{
+  background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.2) 50%,transparent 65%);
 }
 @keyframes shine{
   0%{background-position:200% 0}
