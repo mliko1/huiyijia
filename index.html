@@ -57,9 +57,16 @@
   <div class="hero-slide"><img src="images/hero-2.png" alt=""></div>
   <div class="hero-slide"><img src="images/hero-3-new.jpg" alt=""></div>
   <div class="hero-overlay"></div>
+  <div class="hero-spotlight"></div>
+  <svg class="beams-svg" preserveAspectRatio="none" viewBox="0 0 1200 800">
+    <path class="beam-path" d="M -50 400 Q 300 200 600 350 T 1250 300" />
+    <path class="beam-path" d="M -50 500 Q 200 300 500 450 T 1250 400" style="animation-delay:.5s" />
+    <path class="beam-path" d="M -50 600 Q 400 400 700 550 T 1250 500" style="animation-delay:1s" />
+    <path class="beam-path" d="M -50 250 Q 350 100 650 200 T 1250 150" style="animation-delay:1.5s" />
+  </svg>
   <div class="hero-content">
     <span class="eyebrow">EST. 2014 — BEIJING</span>
-    <h1 data-i18n="hero_title">汇亿嘉</h1>
+    <h1 data-i18n="hero_title" class="shiny-text">汇亿嘉</h1>
     <p data-i18n="hero_sub">气体传感器行业领导者</p>
   </div>
   <div class="hero-dots">
@@ -72,9 +79,9 @@
 <section class="section">
   <div class="container">
     <div class="section-header fade-up">
-      <span class="section-index">01 — HUIYIJIA</span>
+      <span class="section-index gradient-text">01 — HUIYIJIA</span>
       <h2 data-i18n="about_title">公司简介</h2>
-      <p data-i18n="about_subtitle">气体传感器行业解决方案服务商</p>
+      <p data-i18n="about_subtitle" class="text-generate">气体传感器行业解决方案服务商</p>
     </div>
     <div class="about-grid">
       <div class="about-text fade-up">
@@ -84,9 +91,9 @@
         <p data-i18n="about_p2">愿景：致力于通过最优秀的产品和服务，为人类享受美好健康而不懈努力</p>
         <p data-i18n="about_p3">策略：加大研发投入，提供产品全生命周期的服务</p>
         <div class="about-stats">
-          <div class="stat-item"><div class="stat-num">2014</div><div class="stat-label" data-i18n="stat_founded">成立于北京</div></div>
-          <div class="stat-item"><div class="stat-num">40万+</div><div class="stat-label" data-i18n="stat_output">年产氧气传感器</div></div>
-          <div class="stat-item"><div class="stat-num">12+</div><div class="stat-label" data-i18n="stat_years">年行业经验</div></div>
+          <div class="stat-item"><div class="stat-num" data-count="2014">0</div><div class="stat-label" data-i18n="stat_founded">成立于北京</div></div>
+          <div class="stat-item"><div class="stat-num" data-count="40" data-suffix="万+">0</div><div class="stat-label" data-i18n="stat_output">年产氧气传感器</div></div>
+          <div class="stat-item"><div class="stat-num" data-count="12" data-suffix="+">0</div><div class="stat-label" data-i18n="stat_years">年行业经验</div></div>
         </div>
       </div>
       <div class="about-images fade-up">
@@ -101,10 +108,11 @@
 <section class="section section-alt">
   <div class="container">
     <div class="section-header center fade-up">
-      <span class="section-index">02 — TIMELINE</span>
+      <span class="section-index gradient-text">02 — TIMELINE</span>
       <h2 data-i18n="timeline_title">发展历程</h2>
     </div>
-    <div class="timeline">
+    <div class="timeline tracing-beam-wrapper">
+      <svg class="tracing-beam-svg"><path class="tracing-beam-path" d="M 0.5 0 L 0.5 800" /></svg>
       <div class="timeline-item fade-up"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2014</div><div class="timeline-text" data-i18n="tl_2014">2014年成立于北京</div></div></div>
       <div class="timeline-item fade-up"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2016</div><div class="timeline-text" data-i18n="tl_2016">传感器产品在制氧机行业达到国内领先水平</div></div></div>
       <div class="timeline-item fade-up"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-year">2018</div><div class="timeline-text" data-i18n="tl_2018">引入行业投资基金，组建高管团队</div></div></div>
@@ -118,18 +126,18 @@
 <section class="section">
   <div class="container">
     <div class="section-header center fade-up">
-      <span class="section-index">03 — CLIENTS</span>
+      <span class="section-index gradient-text">03 — CLIENTS</span>
       <h2 data-i18n="clients_title">客户群</h2>
-      <p data-i18n="clients_subtitle">我们服务众多行业领导者</p>
+      <p data-i18n="clients_subtitle" class="text-generate">我们服务众多行业领导者</p>
     </div>
     <div class="clients-grid">
-      <div class="client-card fade-up"><span class="client-dot"></span><span class="client-name" data-i18n="client1">迈卓医疗</span></div>
-      <div class="client-card fade-up"><span class="client-dot"></span><span class="client-name" data-i18n="client2">雅美娜</span></div>
-      <div class="client-card fade-up"><span class="client-dot"></span><span class="client-name" data-i18n="client3">巨贸康健</span></div>
-      <div class="client-card fade-up"><span class="client-dot"></span><span class="client-name" data-i18n="client4">柯尔</span></div>
-      <div class="client-card fade-up"><span class="client-dot"></span><span class="client-name" data-i18n="client5">富林</span></div>
-      <div class="client-card fade-up"><span class="client-dot"></span><span class="client-name" data-i18n="client6">皖舒医疗</span></div>
-      <div class="client-card fade-up"><span class="client-dot"></span><span class="client-name" data-i18n="client7">双熙医疗</span></div>
+      <div class="client-card fade-up card-spotlight glare-card"><span class="client-dot"></span><span class="client-name" data-i18n="client1">迈卓医疗</span></div>
+      <div class="client-card fade-up card-spotlight glare-card"><span class="client-dot"></span><span class="client-name" data-i18n="client2">雅美娜</span></div>
+      <div class="client-card fade-up card-spotlight glare-card"><span class="client-dot"></span><span class="client-name" data-i18n="client3">巨贸康健</span></div>
+      <div class="client-card fade-up card-spotlight glare-card"><span class="client-dot"></span><span class="client-name" data-i18n="client4">柯尔</span></div>
+      <div class="client-card fade-up card-spotlight glare-card"><span class="client-dot"></span><span class="client-name" data-i18n="client5">富林</span></div>
+      <div class="client-card fade-up card-spotlight glare-card"><span class="client-dot"></span><span class="client-name" data-i18n="client6">皖舒医疗</span></div>
+      <div class="client-card fade-up card-spotlight glare-card"><span class="client-dot"></span><span class="client-name" data-i18n="client7">双熙医疗</span></div>
     </div>
   </div>
 </section>
@@ -147,6 +155,7 @@
 </footer>
 <div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</div>
 <script src="theme.js"></script>
+<script src="effects.js"></script>
 <script src="i18n.js"></script>
 </body>
 </html>

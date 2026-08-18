@@ -76,7 +76,7 @@
           <div class="form-group"><label data-i18n="form_email">邮箱</label><input type="email" id="cEmail" required></div>
           <div class="form-group"><label data-i18n="form_subject">主题</label><select id="cSubject"><option data-i18n="form_opt1">产品咨询</option><option data-i18n="form_opt2">技术支持</option><option data-i18n="form_opt3">样品申请</option><option data-i18n="form_opt4">合作洽谈</option></select></div>
           <div class="form-group"><label data-i18n="form_message">留言内容</label><textarea id="cMsg" required></textarea></div>
-          <button type="submit" class="btn" data-i18n="form_submit">提交咨询</button>
+          <button type="submit" class="btn border-beam ripple-btn magnetic" data-i18n="form_submit">提交咨询</button>
           <p id="formResult" style="margin-top:16px;font-size:14px;font-family:var(--ff-body)"></p>
         </form>
       </div>
@@ -127,6 +127,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 </footer>
 <div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</div>
 <script src="theme.js"></script>
+<script src="effects.js"></script>
 <script src="i18n.js"></script>
 </body>
 </html>

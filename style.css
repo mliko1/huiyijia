@@ -715,3 +715,238 @@ body::after{
   .page-banner{padding:100px 0 70px}
   .logo-img{height:40px}
 }
+
+/* ============================================================
+   PREMIUM EFFECTS — React Bits · Aceternity UI · Uiverse.io
+   ============================================================ */
+
+/* — 1. SPOTLIGHT (Aceternity UI) — Hero radial glow — */
+.hero-spotlight{
+  position:absolute;top:50%;left:50%;transform:translate(-72%,-62%) scale(.5);
+  width:140vw;height:140vw;max-width:900px;max-height:900px;
+  opacity:0;pointer-events:none;z-index:1;
+  background:radial-gradient(circle,rgba(168,133,74,.18),transparent 60%);
+  animation:spotlight-in 2.2s var(--ease-out) .3s forwards;
+}
+[data-theme="dark"] .hero-spotlight{
+  background:radial-gradient(circle,rgba(201,163,94,.14),transparent 60%);
+}
+@keyframes spotlight-in{
+  0%{opacity:0;transform:translate(-72%,-62%) scale(.5)}
+  100%{opacity:1;transform:translate(-50%,-40%) scale(1)}
+}
+
+/* — 2. BACKGROUND BEAMS (Aceternity UI) — SVG animated light paths — */
+.beams-svg{
+  position:absolute;inset:0;width:100%;height:100%;
+  pointer-events:none;z-index:1;opacity:.5;
+}
+.beam-path{
+  fill:none;stroke-width:1.5;stroke-linecap:round;
+  stroke:var(--bronze);opacity:0;
+  animation:beam-draw 3s var(--ease-out) forwards,beam-pulse 4s ease-in-out 3s infinite;
+}
+[data-theme="dark"] .beam-path{stroke:var(--bronze-bright)}
+@keyframes beam-draw{
+  0%{opacity:0;stroke-dashoffset:1000;stroke-dasharray:1000}
+  100%{opacity:.4;stroke-dashoffset:0;stroke-dasharray:1000}
+}
+@keyframes beam-pulse{
+  0%,100%{opacity:.2}
+  50%{opacity:.5}
+}
+
+/* — 3. SHINY TEXT (React Bits) — Moving shine sweep — */
+.shiny-text{
+  background:linear-gradient(110deg,#f6f2ea 35%,rgba(255,255,255,.9) 50%,#f6f2ea 65%);
+  background-size:200% 100%;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  animation:shine 4s linear infinite;
+}
+[data-theme="dark"] .shiny-text{
+  background:linear-gradient(110deg,#ebe7df 35%,rgba(255,255,255,.7) 50%,#ebe7df 65%);
+  background-size:200% 100%;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  animation:shine 4s linear infinite;
+}
+@keyframes shine{
+  0%{background-position:200% 0}
+  100%{background-position:-200% 0}
+}
+
+/* — 4. GRADIENT TEXT (React Bits) — Animated flowing gradient — */
+.gradient-text{
+  background:linear-gradient(90deg,var(--bronze),var(--teal),var(--bronze-bright),var(--bronze));
+  background-size:300% 100%;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  animation:gradient-flow 5s linear infinite;
+}
+[data-theme="dark"] .gradient-text{
+  background:linear-gradient(90deg,var(--bronze-bright),var(--teal),var(--bronze),var(--bronze-bright));
+  background-size:300% 100%;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  animation:gradient-flow 5s linear infinite;
+}
+@keyframes gradient-flow{
+  0%{background-position:0% 0}
+  100%{background-position:300% 0}
+}
+
+/* — 5. MOVING BORDER (Aceternity UI) — Animated conic gradient border — */
+.border-beam{
+  position:relative;overflow:hidden;
+}
+.border-beam::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;
+  background:conic-gradient(from var(--beam-angle,0deg),transparent 0%,var(--bronze-bright) 15%,transparent 30%,transparent 50%,var(--bronze) 65%,transparent 80%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  animation:beam-rotate 3s linear infinite;
+  pointer-events:none;z-index:1;
+}
+[data-theme="dark"] .border-beam::before{
+  background:conic-gradient(from var(--beam-angle,0deg),transparent 0%,var(--bronze-bright) 15%,transparent 30%,transparent 50%,var(--bronze) 65%,transparent 80%);
+}
+@property --beam-angle{
+  syntax:"<angle>";initial value:0deg;inherits:false;
+}
+@keyframes beam-rotate{
+  0%{--beam-angle:0deg}
+  100%{--beam-angle:360deg}
+}
+
+/* Fallback for browsers without @property */
+@supports not (background:conic-gradient(from 0deg,red,blue)){
+  .border-beam::before{
+    animation:beam-rotate-fallback 3s linear infinite;
+  }
+  @keyframes beam-rotate-fallback{
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+  }
+}
+
+/* — 6. CARD SPOTLIGHT (Aceternity UI) — Mouse-following radial glow — */
+.card-spotlight{position:relative;overflow:hidden}
+.card-spotlight::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  background:radial-gradient(circle 200px at var(--mx,50%) var(--my,50%),var(--bronze-glow),transparent 70%);
+  opacity:0;transition:opacity .4s var(--ease);pointer-events:none;z-index:0;
+}
+[data-theme="dark"] .card-spotlight::after{
+  background:radial-gradient(circle 200px at var(--mx,50%) var(--my,50%),rgba(201,163,94,.08),transparent 70%);
+}
+.card-spotlight:hover::after{opacity:1}
+.card-spotlight>*{position:relative;z-index:1}
+
+/* — 7. GLARE CARD (Aceternity UI) — Cursor-following sheen — */
+.glare-card{position:relative;overflow:hidden}
+.glare-card::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  background:linear-gradient(var(--glare-angle,115deg),transparent 30%,rgba(255,255,255,.08) 45%,rgba(255,255,255,.12) 50%,rgba(255,255,255,.08) 55%,transparent 70%);
+  opacity:0;transition:opacity .5s var(--ease);pointer-events:none;z-index:2;
+}
+[data-theme="dark"] .glare-card::before{
+  background:linear-gradient(var(--glare-angle,115deg),transparent 30%,rgba(255,255,255,.04) 45%,rgba(255,255,255,.07) 50%,rgba(255,255,255,.04) 55%,transparent 70%);
+}
+.glare-card:hover::before{opacity:1;animation:glare-sweep .9s var(--ease-out) forwards}
+@keyframes glare-sweep{
+  0%{transform:translateX(-100%)}
+  100%{transform:translateX(100%)}
+}
+
+/* — 8. TEXT GENERATE EFFECT (Aceternity UI) — Word-by-word blur reveal — */
+.text-generate .gen-word{
+  display:inline-block;opacity:0;filter:blur(8px);transform:translateY(8px);
+  transition:opacity .5s var(--ease-out),filter .5s var(--ease-out),transform .5s var(--ease-out);
+}
+.text-generate.gen-visible .gen-word{
+  opacity:1;filter:blur(0);transform:translateY(0);
+}
+
+/* — 9. TRACING BEAM (Aceternity UI) — Scroll-drawn SVG path — */
+.tracing-beam-wrapper{position:relative}
+.tracing-beam-svg{
+  position:absolute;left:50%;top:0;bottom:0;width:1px;height:100%;
+  transform:translateX(-.5px);pointer-events:none;z-index:0;overflow:visible;
+}
+.tracing-beam-path{
+  fill:none;stroke:var(--bronze);stroke-width:2;stroke-linecap:round;
+  filter:drop-shadow(0 0 4px var(--bronze-glow));
+}
+[data-theme="dark"] .tracing-beam-path{
+  stroke:var(--bronze-bright);
+  filter:drop-shadow(0 0 6px rgba(201,163,94,.3));
+}
+
+/* — 10. Count Up — styling for animated numbers — */
+.stat-num.counting{font-variant-numeric:tabular-nums}
+
+/* — 11. MAGNETIC BUTTON — subtle pull toward cursor — */
+.magnetic{transition:transform .25s var(--ease-out);will-change:transform}
+
+/* — 12. TILT CARD — 3D perspective tilt on hover — */
+.tilt-card{
+  transform-style:preserve-3d;transition:transform .15s var(--ease-out);
+  will-change:transform;
+}
+.tilt-card .tilt-inner{transform:translateZ(30px)}
+
+/* — 13. RIPPLE BUTTON (Uiverse) — Material ripple on click — */
+.ripple-btn{position:relative;overflow:hidden}
+.ripple-span{
+  position:absolute;border-radius:50%;background:rgba(255,255,255,.4);
+  transform:scale(0);animation:ripple .6s var(--ease-out);pointer-events:none;
+}
+[data-theme="dark"] .ripple-span{background:rgba(255,255,255,.15)}
+@keyframes ripple{
+  to{transform:scale(4);opacity:0}
+}
+
+/* — 14. FLOATING ANIMATION — gentle float for decorative elements — */
+.float-anim{animation:float 6s ease-in-out infinite}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+/* — 15. PULSE GLOW — pulsing glow ring — */
+.pulse-glow{animation:pulse-glow 2.5s ease-in-out infinite}
+@keyframes pulse-glow{
+  0%,100%{box-shadow:0 0 0 0 var(--bronze-glow)}
+  50%{box-shadow:0 0 0 12px transparent}
+}
+
+/* — 16. SHIMMER LINE — sweeping shimmer bar — */
+.shimmer-line{
+  position:relative;overflow:hidden;
+}
+.shimmer-line::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);
+  background-size:200% 100%;animation:shimmer 2.5s linear infinite;
+}
+@keyframes shimmer{
+  0%{background-position:200% 0}
+  100%{background-position:-200% 0}
+}
+
+/* — Responsive adjustments for effects — */
+@media(max-width:768px){
+  .hero-spotlight{width:180vw;height:180vw}
+  .beams-svg{opacity:.3}
+  .card-spotlight::after{display:none}
+  .glare-card::before{display:none}
+  .tracing-beam-svg{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .shiny-text,.gradient-text,.shimmer-line::after,
+  .beam-path,.border-beam::before,.float-anim,.pulse-glow{
+    animation:none!important
+  }
+  .text-generate .gen-word{opacity:1!important;filter:none!important;transform:none!important}
+}
